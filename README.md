@@ -10,6 +10,16 @@ Funciona em **Intel/AMD (amd64)** e **ARM (arm64, ex.: Mac Apple Silicon)**, em 
 
 Tudo é feito **dentro da VM**: não é preciso copiar nada do seu computador.
 
+**0. Baixe a imagem ISO do Ubuntu Server 24.04**
+
+| Computador | Onde baixar |
+|---|---|
+| **Intel e AMD** (Windows, Linux, Mac Intel) | https://releases.ubuntu.com/24.04/ |
+| **ARM** (Mac Apple Silicon M1/M2/M3/M4…) | https://cdimage.ubuntu.com/ubuntu/releases/24.04.5/release/ |
+
+> ⚠️ **Lembrem-se de baixar a versão 24 do Ubuntu *Server*!!!**
+> A versão ARM fica meio escondida: na página acima, procure o arquivo `ubuntu-24.04.5-live-server-arm64.iso`.
+
 **1. Crie a VM** com **Ubuntu Server 24.04 LTS** (4 GB de RAM, 2–4 vCPUs, 40 GB de disco).
 No instalador do Ubuntu:
 - crie o usuário **`devasc`** (a senha você escolhe);

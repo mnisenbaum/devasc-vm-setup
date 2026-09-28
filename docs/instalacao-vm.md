@@ -2,6 +2,10 @@
 
 Base recomendada: **Ubuntu Server 24.04 LTS** (amd64 ou arm64), com OpenSSH marcado na instalação.
 
+Download da ISO:
+- Intel e AMD: https://releases.ubuntu.com/24.04/
+- ARM (Apple Silicon): https://cdimage.ubuntu.com/ubuntu/releases/24.04.5/release/ (arquivo `ubuntu-24.04.5-live-server-arm64.iso`)
+
 ## Hyper-V (Windows, Intel/AMD)
 
 - Geração 2, 4 GB RAM (sem memória dinâmica), 2–4 vCPUs, disco 40 GB, rede no "Default Switch".
