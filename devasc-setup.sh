@@ -236,6 +236,17 @@ if step user; then
   as_user "git config --global user.name 'NetAcad DEVASC'"
   as_user "git config --global user.email 'changeme@example.com'"
   as_user "git config --global init.defaultBranch master"
+  # Em VM: não inicia o mate-power-manager (sem bateria/ACPI real ele trava,
+  # principalmente em sessões RDP) - a energia é controlada pelo hipervisor.
+  if [[ $WITH_DESKTOP -eq 1 ]]; then
+    as_user "mkdir -p ~/.config/autostart && printf '[Desktop Entry]\nType=Application\nName=Power Manager\nExec=mate-power-manager\nHidden=true\nX-MATE-Autostart-enabled=false\n' > ~/.config/autostart/mate-power-manager.desktop"
+  fi
+  # Sem janelas "Sorry, Ubuntu has experienced an internal error" (apport) na VM de laboratório
+  if [[ -f /etc/default/apport ]]; then
+    sed -i 's/^enabled=1/enabled=0/' /etc/default/apport
+    systemctl disable --now apport.service >/dev/null 2>&1 || true
+    rm -f /var/crash/*.crash 2>/dev/null || true
+  fi
   # login automático no LightDM (igual à VM original)
   if [[ $WITH_DESKTOP -eq 1 ]]; then
     mkdir -p /etc/lightdm/lightdm.conf.d
