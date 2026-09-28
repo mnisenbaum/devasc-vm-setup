@@ -1,0 +1,167 @@
+/*=================Header css start here========================*/
+
+.header-container {
+    background-color: #6abf4b !important;
+    color: white !important;
+    height: 100px !important;
+}
+
+.left-header-text {
+    font-size: 45px !important;
+    padding: 40px 0px 0px 0px;
+}
+
+.right-header-content {
+    float: right;
+    font-size: 25px;
+    background: green;
+    height: 100px;
+    line-height: 1.5em;
+    padding: 15px 10px 0px 10px;
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+/*=================Header css ends here========================*/
+
+
+
+/*=================Sidebar css start here========================*/
+
+.sidebar {
+    position: fixed !important;
+    top: 100px !important;
+    background: #3EBAFB !important;
+}
+
+
+.sidebar-item-text {
+    font-size: 2.0rem !important;
+    padding: 30px !important;
+}
+
+.active {
+    background: #017CAD !important;
+
+}
+
+
+/*============================sidebar css ends here=======================*/
+
+
+.center-div {
+    margin-top: 100px;
+    width: calc(100% - 300px) !important;
+    display: block;
+    float: right;
+    height: calc(100vh - 100px) !important;
+    overflow: auto;
+}
+
+.tab-info-container {
+    margin-top: 40px;
+}
+
+.tab-info-container > .text-bold {
+    font-weight: 500 !important;
+}
+
+.book-list-table {
+    margin-top: 50px;
+    margin-left: 50px;
+    height: 60vh;
+    margin-bottom: 50px;
+
+}
+
+.book-list-table tr th {
+    border: 1px solid white;
+}
+
+.book-list-table tr td {
+    border: 1px solid white;
+}
+
+.book-list-table > tbody > tr:nth-child(odd) {
+    background-color: #c5cae9;
+}
+
+.book-list-table > tbody > tr:nth-child(even) {
+    background-color: #e8eaf6;
+}
+
+.book-list-table td:first-child,
+.book-list-table:first-child,
+.book-list-table tr:first-child {
+    width: 150px !important;
+}
+
+/* Media Query for Extra Large devices (1200px - 1439px)*/
+
+@media only screen and (max-width: 1439px) {
+    .left-header-text {
+        font-size: 42px !important;
+
+    }
+
+    .right-header-content {
+        font-size: 20px !important;
+    }
+}
+
+
+/*Media Query for Large devices(992px - 1199px)*/
+
+@media only screen and (max-width: 1199px) {
+    .left-header-text {
+        font-size: 26px !important;
+        padding-top: 37px;
+    }
+
+    .right-header-content {
+        font-size: 20px !important;
+    }
+}
+
+/*Media Query for Medium devices(768px - 991px)*/
+@media only screen and (max-width: 991px) .left-header-text {
+    font-size: 34px !important;
+    line-height: 40px;
+    padding-top: 28px;
+}
+
+
+
+/*Media Query for Small devices(576px - 767px)*/
+
+@media only screen and (max-width: 767px) {
+    .left-header-text {
+        font-size: 30px !important;
+        line-height: 40px;
+        padding-top: 15px;
+    }
+
+    .right-header-content {
+        font-size: 18px !important;
+    }
+}
+
+/*Media Query for Extra Small devices(320px - 575px*/
+
+@media only screen and (max-width: 575px) {
+    .left-header-text {
+        font-size: 30px !important;
+        line-height: 40px;
+        padding-top: 15px;
+    }
+
+    .right-header-content {
+        font-size: 18px !important;
+    }
+}

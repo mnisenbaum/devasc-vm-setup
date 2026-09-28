@@ -1,0 +1,10 @@
+# pacotes temporários
+*.tar.gz
+# cópia antiga do inventário (a oficial está em tools/)
+/devasc-inventory.sh
+# lixo de editores / Python
+__pycache__/
+*.pyc
+.vscode/
+Thumbs.db
+.DS_Store

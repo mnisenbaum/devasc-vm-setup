@@ -1,0 +1,8 @@
+# Versões modernas (Python 3.12). Original usava flask-restplus (abandonado) -> flask-restx.
+flask>=3.0
+flask-restx>=1.3
+flask-cors
+flask-httpauth
+dicttoxml
+faker
+pyyaml

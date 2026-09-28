@@ -1,0 +1,10 @@
+# Scripts sempre com quebra de linha Linux (LF), mesmo editados no Windows
+*.sh   text eol=lf
+*.py   text eol=lf
+*.yml  text eol=lf
+*.yaml text eol=lf
+*.cfg  text eol=lf
+*.md   text eol=lf
+*.jpg  binary
+*.png  binary
+*.pdf  binary

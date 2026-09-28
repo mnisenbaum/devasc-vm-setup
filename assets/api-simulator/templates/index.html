@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="locale" content="US">
+    <meta name="language" content="en">
+    <meta name="country" content="US">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>School Library</title>
+    <link href="/static/css/cui-styleguide.min.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="//www.cisco.com/favicon.ico">
+    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="///www.cisco.com/favicon.ico">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="/static/js/jquery-3.0.0.min.js"></script>
+    <script src="/static/js/script.js"></script>
+</head>
+
+<body class="cui" style="background: #f2f2f2">
+    <header class="header header-container fixed-top ">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 col-sm-6 col-6">
+                    <div class="left-header-text">Welcome to the <span class="text-bold">School Library</span></div>
+                </div>
+                <div class="col-lg-6 col-sm-6 col-6">
+                    <div class="right-header-content">
+                        <div>Are you a developer? We have APIs!</div>
+                        <div>Click <a class="header-item" style="color: white" href="/api/v1/docs" target="_blank">here</a> for API docs.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav id='tabs' role="navigation" class="sidebar sidebar--primary">
+        <div class="sidebar__header">
+            <div class="sidebar__header-title sidebar-header-item-text">Navigation</div>
+        </div>
+        <ul>
+            <li class="sidebar__item "><a href="#books" class="sidebar-item-text">Our Books</a></li>
+            <li class="sidebar__item "><a href="#open-hours" class="sidebar-item-text">Open Hours</a></li>
+            <li class="sidebar__item "><a href="#contact" class="sidebar-item-text">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="center-div">
+        <div class="container center-container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div id='books' class='tabContent'>
+                        <div class="tab-info-container">
+                            <h4 class="text-bold">Here is a list of our books currently in the library.</h4>
+                        </div>
+                        <div class="responsive-table book-list-table">
+                            <table class="table table-bordered">
+                                <thead class="text-size-28 text-bold" style="background: #017CAD;color: white;">
+                                    <tr>
+                                        <th>Book ID</th>
+                                        <th>Title</th>
+                                        <th>Author</th>
+                                    </tr>
+                                </thead>
+                                <tbody id='books-content' class="text-size-28 text-bold">
+
+<!--
+                                    <tr>
+                                        <td>1</td>
+                                        <td>IP Routing Fundamentals</td>
+                                        <td>Mark A. Sportack</td>
+                                    </tr>
+-->
+                                   
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div id='open-hours' class='tabContent'>
+                        <div class="tab-info-container">
+                            <h4 class="text-bold">We are open every day from 9:00AM to 5:00PM.</h4>
+                        </div>
+                    </div>
+
+                    <div id='contact' class='tabContent'>
+                        <div class="tab-info-container">
+                            <h4 class="text-bold">The School Library is located at the School Center.</h4>
+                            <h4 class="text-bold"> You can contact us via email at <a>info@library.demo.local</a>.</h4>
+                            <h4 class="text-bold" style="margin-top: 50px">For programmable access, please refer to our API documentation. <a href="/api/v1/docs" target="_blank">[link]</a></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+</body></html>
