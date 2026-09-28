@@ -8,23 +8,38 @@ Funciona em **Intel/AMD (amd64)** e **ARM (arm64, ex.: Mac Apple Silicon)**, em 
 
 ## Instalação rápida
 
-1. Crie uma VM com **Ubuntu Server 24.04 LTS** (4 GB de RAM, 2–4 vCPUs, 40 GB de disco) e, no instalador, crie o usuário **`devasc`** e marque **Install OpenSSH server**.
-   Detalhes por hipervisor: [`docs/instalacao-vm.md`](docs/instalacao-vm.md).
-2. Na VM:
-   ```bash
-   sudo apt update && sudo apt install -y git
-   git clone https://github.com/mnisenbaum/devasc-vm-setup.git
-   cd devasc-vm-setup
-   sudo ./devasc-setup.sh
-   sudo reboot
-   ```
-3. Depois do reboot, logado como `devasc` (sem sudo):
-   ```bash
-   ~/devasc-vm-setup/devasc-verify.sh
-   ```
-   Tudo com ✔ = VM pronta para os labs.
+Tudo é feito **dentro da VM**: não é preciso copiar nada do seu computador.
 
-A instalação leva de 20 a 40 minutos, dependendo da internet.
+**1. Crie a VM** com **Ubuntu Server 24.04 LTS** (4 GB de RAM, 2–4 vCPUs, 40 GB de disco).
+No instalador do Ubuntu:
+- crie o usuário **`devasc`** (a senha você escolhe);
+- marque **Install OpenSSH server**.
+
+Detalhes por hipervisor (Hyper-V, VMware, VirtualBox, UTM): [`docs/instalacao-vm.md`](docs/instalacao-vm.md).
+
+**2. Entre na VM** como `devasc` (pelo console ou por SSH) e rode:
+
+```bash
+git clone https://github.com/mnisenbaum/devasc-vm-setup.git
+cd devasc-vm-setup
+sudo ./devasc-setup.sh
+```
+
+A instalação leva de 20 a 40 minutos, dependendo da internet. No fim, reinicie:
+
+```bash
+sudo reboot
+```
+
+**3. Confira** (de novo como `devasc`, **sem** sudo):
+
+```bash
+~/devasc-vm-setup/devasc-verify.sh
+```
+
+Tudo com ✔ = VM pronta para os labs. 🎉
+
+> Se aparecer `git: command not found`, instale antes com `sudo apt update && sudo apt install -y git`.
 
 ## O que é instalado
 
